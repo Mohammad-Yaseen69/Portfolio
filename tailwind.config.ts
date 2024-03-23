@@ -29,7 +29,7 @@ export default {
         Balsamiq : ["Balsamiq Sans", "sans-serif"]
       },
       screens: {
-        xs: "596px",
+        xs: "475px",
         ss: "620px",
         sm: "768px",
         md: "1060px",
