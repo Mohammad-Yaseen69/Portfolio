@@ -23,13 +23,13 @@ const Header = () => {
 
                 <div className="hidden ss:flex space-x-6">
                     {navLinks.map(link => (
-                        <h1
+                        <a
                             key={link.id}
-                            href={link.url}
+                            href={link.link}
                             className="bg-gradient-to-r text-transparent from-white to-gray-300 uppercase font-Code font-semibold cursor-pointer text-lg md:text-xl hover:text-gray-400 hover:scale-105 transition duration-300 bg-clip-text"
                         >
                             {link.name}
-                        </h1>
+                        </a>
 
                     ))}
                 </div>
@@ -48,13 +48,13 @@ const Header = () => {
             <div className={`ss:hidden absolute z-10 w-full left-0 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <div className="bg-gray-900 flex flex-col gap-8 py-4 px-6 rounded-md">
                     {navLinks.map(link => (
-                        <h1
+                        <a
                             key={link.id}
-                            href={link.url}
+                            href={link.link}
                             className="bg-gradient-to-r text-transparent from-white to-gray-300 uppercase font-Code font-semibold cursor-pointer text-lg md:text-xl hover:text-gray-400 transition duration-300 bg-clip-text"
                         >
                             {link.name}
-                        </h1>
+                        </a>
                     ))}
                 </div>
             </div>
