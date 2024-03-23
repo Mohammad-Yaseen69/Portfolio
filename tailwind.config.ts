@@ -25,9 +25,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        SpaceGrotesk: ["Space Grotesk", "sans-serif"],
-        Montserrat: ["Montserrat", "sans-serif"],
-        RussoOne: ["Russo One", "sans-serif"],
+        Code: ["Encode Sans Expanded", "sans-serif"],
+        Balsamiq : ["Balsamiq Sans", "sans-serif"]
       },
       screens: {
         xs: "596px",
