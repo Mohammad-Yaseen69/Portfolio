@@ -1,11 +1,12 @@
 import { BackgroundBeams } from "./components/ui/background-beams"
-import { Section, Header } from "./components"
+import { Section, Header , Hero} from "./components"
 
 function App() {
 
   return (
     <>
       <Header />
+      <Hero />
       <BackgroundBeams />
     </>
   )
