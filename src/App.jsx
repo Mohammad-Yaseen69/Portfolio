@@ -1,5 +1,5 @@
 import { BackgroundBeams } from "./components/ui/background-beams"
-import { Section, Header , Hero} from "./components"
+import { Section, Header , Hero , Skills} from "./components"
 
 function App() {
 
@@ -7,6 +7,8 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Skills />
+      <div className="h-screen"></div>
       <BackgroundBeams />
     </>
   )
