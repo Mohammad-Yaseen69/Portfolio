@@ -24,7 +24,7 @@ const Skills = () => {
 
     return (
         <Section id="skills">
-            <div className='w-full h-full sm:mt-14 skillset-section mb-20'>
+            <div className='w-full h-full  skillset-section mb-20'>
                 <h1 className='font-bold font-Balsamiq uppercase text-center text-white text-6xl mb-8'>Skillset</h1>
 
                 <div className='flex flex-wrap  w-full justify-center gap-4'>
