@@ -104,6 +104,8 @@ const Contact = () => {
                     </div>
 
                 </div>
+
+                <div className="absolute w-[50%] h-[40%] bottom-20 white__gradient z-0 right-50"></div>
             </div>
         </Section>
     )

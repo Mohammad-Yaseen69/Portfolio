@@ -181,6 +181,12 @@ html {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 400px) {
+  .form {
+    padding-inline: 0.5em;
+  }
+}
+
 .form-heading {
   text-align: center;
   margin: 2em;
@@ -253,4 +259,9 @@ html {
 .form-card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
 }
