@@ -3,86 +3,168 @@
 @tailwind utilities;
 
 
-body ,html{
+body,
+html {
   scroll-behavior: smooth;
 }
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    border-radius: 999px;
-    background: #f1f1f1; /* Color of the track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-    background: #888; /* Color of the scroll thumb */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    border-radius: 999px;
-    background: #555; /* Color of the scroll thumb on hover */
-  }
-  
+  width: 5px;
+  /* Width of the scrollbar */
+}
 
-  .button {
-    --color: #00A97F;
-    padding: 0.5em 1.3em;
-    background-color: transparent;
-    border-radius: .3em;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: 400;
-    font-size: 17px;
-    border: 1px solid;
-    font-family: inherit;
-    text-transform: uppercase;
-    color: var(--color);
-    z-index: 1;
-   }
-   
-   .button::before, .button::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-    background-color: var(--color);
-    transition: 1s ease;
-   }
-   
-   .button::before {
-    top: -1em;
-    left: -1em;
-   }
-   
-   .button::after {
-    left: calc(100% + 1em);
-    top: calc(100% + 1em);
-   }
-   
-   .button:hover::before, .button:hover::after {
-    height: 410px;
-    width: 410px;
-   }
-   
-   .button:hover {
-    color: rgb(10, 25, 30);
-   }
-   
-   .button:active {
-    filter: brightness(.8);
-   }
-   
+::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: #f1f1f1;
+  /* Color of the track */
+}
 
-   .blue__gradient {
-    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-    filter: blur(123px);
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #888;
+  /* Color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 999px;
+  background: #555;
+  /* Color of the scroll thumb on hover */
+}
+
+
+.button {
+  --color: #00A97F;
+  padding: 0.5em 1.3em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button:hover {
+  color: rgb(10, 25, 30);
+}
+
+.button:active {
+  filter: brightness(.8);
+}
+
+
+.Btn {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .4s;
+  cursor: pointer;
+  position: relative;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  overflow: hidden;
+}
+
+.BtnInsta {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.BtnLinkedin {
+  background: #287ce9;
+  background: -moz-linear-gradient(45deg, #287ce9 0%, hsl(234, 77%, 50%) 25%, #1748eb 50%, #1b0cf8 75%, #052aff 100%);
+  background: -webkit-linear-gradient(45deg, #287ce9 0%, hsl(234, 77%, 50%) 25%, #1748eb 50%, #1b0cf8 75%, #052aff 100%);
+  background: linear-gradient(45deg, #287ce9 0%, hsl(234, 77%, 50%) 25%, #1748eb 50%, #1b0cf8 75%, #052aff 100%);
+}
+
+.svgIcon {
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  font-weight: 600;
+  opacity: 0;
+  transition-duration: .4s;
+}
+
+.Btn:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(-168.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
