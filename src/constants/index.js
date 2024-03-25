@@ -71,22 +71,6 @@ export const skillSet = [
 
 export const projects = [
     {
-        title: "Blog-App",
-        link: "https://blog-app-120.netlify.app/",
-        img: BlogApp,
-        github: "https://github.com/Mohammad-Yaseen69/Blog-App",
-        description: "A Blog App with Authentication and all the crud operations",
-        techs: ["React", "Redux", "Tailwind", "Router-dom", "App-write"]
-    },
-    {
-        title: "Al-Hassan-Tailor",
-        link: "https://al-hassan-tailor.netlify.app/",
-        img: AlHassan,
-        github: "https://github.com/Mohammad-Yaseen69/Al_Hassan_Tailor",
-        description: "Client Project with stunning animations and admin panel",
-        techs: ["React", "Redux", "Tailwind", "Router-dom", "App-write", "GSAP"]
-    },
-    {
         title: "Movix",
         link: "https://movie-site-019.netlify.app/",
         img: Movix,
@@ -101,6 +85,22 @@ export const projects = [
         github: "https://github.com/Mohammad-Yaseen69/Youtube-Clone",
         description: "Youtube Clone with all the youtube videos support include search , comments and trending features",
         techs: ["React", "Tailwind", "Rapid-Api", "Router-Dom"]
+    },
+    {
+        title: "Blog-App",
+        link: "https://blog-app-120.netlify.app/",
+        img: BlogApp,
+        github: "https://github.com/Mohammad-Yaseen69/Blog-App",
+        description: "A Blog App with Authentication and all the crud operations",
+        techs: ["React", "Redux", "Tailwind", "Router-dom", "App-write"]
+    },
+    {
+        title: "Al-Hassan-Tailor",
+        link: "https://al-hassan-tailor.netlify.app/",
+        img: AlHassan,
+        github: "https://github.com/Mohammad-Yaseen69/Al_Hassan_Tailor",
+        description: "Client Project with stunning animations and admin panel",
+        techs: ["React", "Redux", "Tailwind", "Router-dom", "App-write", "GSAP"]
     },
     {
         title: "Hoobank",
