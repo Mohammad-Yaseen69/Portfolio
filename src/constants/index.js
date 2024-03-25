@@ -17,12 +17,12 @@ import {
 
 export const navLinks = [
     {
-        name: "About",
-        link: "#about"
-    },
-    {
         name: "Skills",
         link: "#skills"
+    },
+    {
+        name: "About",
+        link: "#about"
     },
     {
         name: "Projects",
@@ -128,7 +128,7 @@ export const personalInfo = [
     },
     {
         title: "Age",
-        value: "17"
+        value: "16"
     },
     {
         title: "Work Experience",

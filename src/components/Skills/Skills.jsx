@@ -30,7 +30,7 @@ const Skills = () => {
                 <div className='flex flex-wrap  w-full justify-center gap-4'>
 
                     {skillSet.map((skill, index) => (
-                        <div id={`box${index + 1}`} key={index} className='opacity-0 hover:scale-105 transition-all duration-200 bg-gray-800 rounded-lg p-2 md:p-4 text-center w-[40%] ss:w-[30%] mb-4 skill-card'>
+                        <div id={`box${index + 1}`} key={index} className='opacity-0 hover:scale-[1.04] transition-all duration-200 bg-gray-800 rounded-lg p-2 md:p-4 text-center w-[40%] ss:w-[30%] mb-4 skill-card'>
                             <img src={skill.img} alt={skill.title} className={`mx-auto ${skill.title == "App Write" ? " w-full sm:w-full" : ""} size-12 sm:size-24 object-contain mb-4`} />
                             <h2 className={`text-white uppercase sm:text-lg font-semibold`}>{skill.title}</h2>
                         </div>
