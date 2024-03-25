@@ -1,12 +1,32 @@
+import { useEffect } from 'react';
 import { Section } from '../'
 import { personalInfo } from '../../constants'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const About = () => {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(['.info' , '.about'], {
+            opacity: 1,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top 70%', // Adjusted start position
+                end: 'bottom 20%', // Adjusted end position
+                toggleActions: 'play none none none',
+            }
+        });
+    }, []);
+
     return (
         <Section id="about">
-            <div className='flex max-md:flex-col items-start  h-full  relative my-36'>
+            <div className='flex max-md:flex-col items-start  h-full  relative mt-36'>
 
-                <div className='w-full md:w-1/2 max-md:order-2 max-xs:my-16 max-md:my-24'>
+                <div className='info relative opacity-0 w-full md:w-1/2 max-md:order-2 max-xs:my-16 max-md:my-24'>
                     <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl my-6'>Personal Info:</h1>
                     {personalInfo.map(info => (
                         <div className='py-6 w-full sm:w-[70%] border-b border-dashed border-gray-300'>
@@ -16,7 +36,7 @@ const About = () => {
                     ))}
                 </div>
 
-                <div className='md:w-1/2 max-md:order-1'>
+                <div className='about opacity-0 relative md:w-1/2 max-md:order-1'>
                     <div className='md:translate-y-20'>
                         <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl mb-8'>About me</h1>
                         <p className='text-gray-300  font-Code text-start  xs:text-xl'>
@@ -24,7 +44,8 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="absolute w-[50%] h-[40%] bottom-0 blue__gradient z-0 -left-28 top-0"></div>
+
+                <div className="absolute w-[50%] -z-10 h-[40%] bottom-0 blue__gradient -left-28 top-0"></div>
             </div>
         </Section>
     )
