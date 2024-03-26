@@ -1,4 +1,5 @@
 import { Section } from '../'
+import {FaFacebook , FaInstagram , FaGithub , FaTwitter , FaLinkedin} from 'react-icons/fa'
 
 const CTA = () => {
     return (

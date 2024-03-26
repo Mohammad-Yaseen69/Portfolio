@@ -1,5 +1,5 @@
 import { BackgroundBeams } from "./components/ui/background-beams"
-import { CTA, Header , Hero , Skills , Projects , About , Contact} from "./components"
+import { CTA, Header , Hero , Skills , Projects , About , Contact, Footer} from "./components"
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
       <CTA />
       <Projects />
       <Contact />
+      <Footer />
       <BackgroundBeams />
     </>
   )

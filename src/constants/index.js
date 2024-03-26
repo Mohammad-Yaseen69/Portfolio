@@ -14,6 +14,7 @@ import {
     Movix,
     YoutubeClone
 } from "../assests"
+import {FaFacebook , FaInstagram , FaGithub , FaTwitter , FaLinkedin} from 'react-icons/fa'
 
 export const navLinks = [
     {
@@ -142,4 +143,27 @@ export const personalInfo = [
         title: "Address",
         value: "Karachi, Pakistan"
     },
+]
+
+export const socialMedia = [
+    {
+        icon: FaGithub,
+        link : "https://github.com/Mohammad-Yaseen69/"
+    },
+    {
+        icon : FaLinkedin,
+        link : "https://www.linkedin.com/in/mohammad-yaseen-8774992a3/"
+    },
+    {
+        icon : FaFacebook,
+        link : "https://www.facebook.com/mohammadyaseen.developer"
+    },
+    {
+        icon : FaInstagram,
+        link : "https://www.instagram.com/yaxeen_106/"
+    },
+    {
+        icon : FaTwitter,
+        link : "https://twitter.com/MohammadYa50019"
+    }
 ]
