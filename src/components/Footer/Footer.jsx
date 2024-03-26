@@ -14,7 +14,7 @@ const Footer = () => {
                 ))}
             </div>
             <div className="absolute bottom-0 left-0 w-full border-t-[1px] border-gray-700 bg-black py-4 text-white text-center">
-                &copy; 2024 Your Website Name. All Rights Reserved.
+                &copy; 2024 Mohammad-Yaseen. All Rights Reserved.
             </div>
         </div>
     )

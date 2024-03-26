@@ -14,6 +14,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault()
+        setDisableBtn(true)   
 
         sendForm('service_xapwcof', 'template_03b6eui', ref.current, {
             publicKey: '35-CDbzocxSmC1z0n',
@@ -32,9 +33,7 @@ const Contact = () => {
                     setSent(false);
                     setDisableBtn(false)
                 },
-            ).finally(() => {
-                setDisableBtn(true)            
-            });
+            )
     }
 
     return (

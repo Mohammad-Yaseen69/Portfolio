@@ -40,7 +40,7 @@ const About = () => {
                     <div className='md:translate-y-20'>
                         <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl mb-8'>About me</h1>
                         <p className='text-gray-300  font-Code text-start  xs:text-xl'>
-                            Hey there! I'm a self-taught developer deeply passionate about frontend development. With a knack for crafting captivating user interfaces, I'm now venturing into backend development. Currently, I'm immersing myself in Web 3 technologies and Solidity, aiming to innovate in decentralized applications. As a fresher in the field, I'm excited to learn and grow alongside fellow developers. Join me as I explore new horizons and push the boundaries of technology.
+                            Hey there! I'm a self-taught developer deeply passionate about Coding. With a knack for crafting captivating user interfaces, I'm now venturing into backend development. Currently, I'm immersing myself in Web 3 technologies and Solidity, aiming to innovate in decentralized applications. As a fresher in the field, I'm excited to learn and grow alongside fellow developers. Join me as I explore new horizons and push the boundaries of technology.
                         </p>
                     </div>
                 </div>

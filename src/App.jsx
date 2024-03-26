@@ -4,7 +4,7 @@ import { CTA, Header , Hero , Skills , Projects , About , Contact, Footer} from 
 function App() {
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
       <Hero />
       <Skills />
@@ -14,7 +14,7 @@ function App() {
       <Contact />
       <Footer />
       <BackgroundBeams />
-    </>
+    </div>
   )
 }
 
