@@ -1,7 +1,16 @@
-import { socialMedia } from '../../constants'
+import {FaFacebook , FaInstagram , FaGithub , FaTwitter , FaLinkedin} from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 const Footer = () => {
-    console.log(socialMedia)
+    const links = useSelector(state => state.info.links)
+
+    const socialMedia = [
+        { name: 'Facebook', link: links.facebook, icon: FaFacebook },
+        { name: 'Instagram', link: links.instagram, icon: FaInstagram },
+        { name: 'Github', link: links.github, icon: FaGithub },
+        { name: 'Twitter', link: links.twitter, icon: FaTwitter },
+        { name: 'Linkedin', link: links.linkedin, icon: FaLinkedin }
+    ]
     return (
         <div className='bg-black mt-32 flex items-center justify-center p-12 w-full relative'>
             <div className="flex justify-center items-center -translate-y-6 space-x-6">

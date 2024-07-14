@@ -1,15 +1,24 @@
 import { useEffect } from 'react';
 import { Section } from '../'
-import { personalInfo } from '../../constants'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useSelector } from 'react-redux';
 
 const About = () => {
+    const info = useSelector(state => state.info.info)
+
+    const personalInfo = [
+        { title: 'Name', value: "Mohammad Yaseen" },
+        { title: 'Address', value: info?.address },
+        { title: 'Age', value: info?.age },
+        { title: 'Work Experience', value: info?.workExperience },
+        { title: "Language" , value : "Urdu, Hindhi, English" }
+    ];
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(['.info' , '.about'], {
+        gsap.to(['.info', '.about'], {
             opacity: 1,
             duration: 1,
             stagger: 0.2,
@@ -28,8 +37,8 @@ const About = () => {
 
                 <div className='info relative opacity-0 w-full md:w-1/2 max-md:order-2 max-xs:my-16 max-md:my-24'>
                     <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl my-6'>Personal Info:</h1>
-                    {personalInfo.map((info , index) => (
-                        <div className={`py-6 w-full sm:w-[70%]  ${index !== personalInfo.length -1 && "border-b border-dashed border-gray-300"} `}>
+                    {personalInfo.map((info, index) => (
+                        <div className={`py-6 w-full sm:w-[70%]  ${index !== personalInfo.length - 1 && "border-b border-dashed border-gray-300"} `}>
                             <span className='font-extrabold text-white text-2xl'>{info.title} :</span>
                             <span className='ml-5 text-gray-200 text-2xl  font-semibold'>{info.value}</span>
                         </div>
@@ -40,7 +49,7 @@ const About = () => {
                     <div className='md:translate-y-20'>
                         <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl mb-8'>About me</h1>
                         <p className='text-gray-300  font-Code text-start  xs:text-xl'>
-                            Hey there! I'm a self-taught developer deeply passionate about Coding. With a knack for crafting captivating user interfaces, I'm now venturing into backend development. Currently, I'm immersing myself in Web 3 technologies and Solidity, aiming to innovate in decentralized applications. As a fresher in the field, I'm excited to learn and grow alongside fellow developers. Join me as I explore new horizons and push the boundaries of technology.
+                          {info?.about}
                         </p>
                     </div>
                 </div>
