@@ -8,7 +8,7 @@ import Container from './Container'
 const AddSkills = () => {
     const { categoryId } = useParams()
     const dispatch = useDispatch()
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit , setValue } = useForm();
 
 
 
@@ -24,6 +24,11 @@ const AddSkills = () => {
             skills : formData,
             categoryId
         }))
+
+
+
+        setValue("skill", "")
+        setValue("icon", "")
     }
 
     return (

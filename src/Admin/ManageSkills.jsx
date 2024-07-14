@@ -41,7 +41,7 @@ const ManageSkills = () => {
                     <div className='flex items-center gap-1'>
                       <IoClose cursor="pointer" size={30} color="red" onClick={() => handleDelete(category._id, skill._id)} />
                       <div className='flex items-center gap-2'>
-                        <img src={skill.icon.publicUrl} className='size-8' alt="" />
+                        <img src={skill.icon.publicUrl} className='size-8 object-contain repeat' alt="" />
                         <p className='text-white font-bold '>{skill.skill}</p>
                       </div>
                     </div>

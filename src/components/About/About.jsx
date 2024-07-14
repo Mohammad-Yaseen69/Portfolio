@@ -39,8 +39,8 @@ const About = () => {
                     <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl my-6'>Personal Info:</h1>
                     {personalInfo.map((info, index) => (
                         <div className={`py-6 w-full sm:w-[70%]  ${index !== personalInfo.length - 1 && "border-b border-dashed border-gray-300"} `}>
-                            <span className='font-extrabold text-white text-2xl'>{info.title} :</span>
-                            <span className='ml-5 text-gray-200 text-2xl  font-semibold'>{info.value}</span>
+                            <span className='font-extrabold text-white text-lg xs:text-2xl'>{info.title} :</span>
+                            <span className='ml-5 text-gray-200 text-lg xs:text-2xl  font-semibold'>{info.value}</span>
                         </div>
                     ))}
                 </div>

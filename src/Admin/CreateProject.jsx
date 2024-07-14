@@ -6,7 +6,7 @@ import { createProject } from "../store/infoSlice"
 import toast from 'react-hot-toast';
 
 const CreateProject = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit  , setValue} = useForm();
   const dispatch = useDispatch();
 
 
@@ -23,11 +23,15 @@ const CreateProject = () => {
     formData.append("techStack", JSON.stringify( data.techStack.replace(" ", "").split(",")))
     formData.append("img", data.img[0])
 
-    for (const pair of formData) {
-      console.log(pair)
-    }
 
     dispatch(createProject(formData))
+
+    setValue("name", "")
+    setValue("description", "")
+    setValue("github", "")
+    setValue("hostlink", "")
+    setValue("techStack", "")
+    setValue("img", "")
   }
 
   return (

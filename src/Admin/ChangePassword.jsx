@@ -10,6 +10,8 @@ const ChangePassword = () => {
 
     const submit = (data) => {
         dispatch(changePassword(data))
+        data.oldPassword = ""
+        data.newPassword = ""
     }
 
     return (

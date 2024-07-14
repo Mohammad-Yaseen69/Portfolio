@@ -6,7 +6,7 @@ const Hero = () => {
   const tagline = useSelector(state => state.info.info)
   return (
     <Section className="">
-      <div className='relative flex items-center pb-48  justify-center h-screen  px-9'>
+      <div className='relative flex items-center pb-40 md:pb-56  justify-center h-screen  px-9'>
         <div className='flex flex-col gap-4 items-center'>
           <p className='font-Balsamiq italic text-blue-400'>Hello there I'm:</p>
           <h1 className='-mt-4 text-white whitespace-nowrap font-bold xs:font-extrabold text-4xl xs:text-5xl md:text-6xl'>Mohammad Yaseen</h1>

@@ -10,10 +10,10 @@ const Projects = () => {
             <div className='w-full relative h-full'>
                 <h1 className='font-bold uppercase text-center font-Balsamiq text-white text-6xl mb-8'>My Work</h1>
 
-                <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10 place-items-center'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-4  mt-10 place-items-center'>
                     {projects?.map((project, index) => (
-                        <div key={index} className='bg-zinc-900 w-[380px] items-start h-full rounded-lg overflow-hidden shadow-lg flex flex-col'>
-                            <img src={project.img.publicUrl} alt={project.name} className='w-full h-[15rem]  object-cover ' />
+                        <div key={index} className='bg-zinc-900 w-full xs:w-[475px] sm:w-[600px] md:w-full  items-start h-full rounded-lg overflow-hidden shadow-lg flex flex-col'>
+                            <img src={project.img?.publicUrl} alt={project.name} className='w-full h-[16rem]  object-cover object-top' />
                             <div className='flex-1 p-4 flex flex-col justify-between'>
                                 <h2 className='text-white text-xl font-semibold mb-2'>{project.name}</h2>
                                 <p className='text-gray-300 mb-4'>{project.description}</p>

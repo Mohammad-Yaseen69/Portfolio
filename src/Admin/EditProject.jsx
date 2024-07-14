@@ -25,7 +25,7 @@ const EditProject = () => {
 
 
     const submit = (data) => {
-        console.log(data)
+        
 
 
         const formData = new FormData();
@@ -35,13 +35,13 @@ const EditProject = () => {
         formData.append("name", data.name);
         formData.append("description", data.description)
         formData.append("github", data.github)
-        formData.append("hostLink", data.hostlink)
+        formData.append("hostLink", data.hostLink)
         formData.append("techStack", JSON.stringify(techStack))
         formData.append("img", data.img[0])
 
 
         dispatch(editProject({info: formData , id})).then((res) => {
-            console.log(res)
+            
         })
     }
 
@@ -87,7 +87,7 @@ const EditProject = () => {
                     </div>
 
 
-                    <button type="submit" className="text-white bg-blue-600 px-10 py-2 rounded-md mt-4">Create</button>
+                    <button type="submit" className="text-white bg-blue-600 px-10 py-2 rounded-md mt-4">Update</button>
                 </form>
             </div>
         </Container>
