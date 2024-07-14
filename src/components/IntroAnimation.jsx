@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import gsap from "gsap"
 import { useRef, useLayoutEffect } from "react"
 import { useDispatch } from 'react-redux'
-import {toggleAnimation} from "../store/animationSlice"
+import { toggleAnimation } from "../store/animationSlice"
 
 const IntroAnimation = () => {
     const refrence = useRef(null)
@@ -57,20 +57,20 @@ const IntroAnimation = () => {
     }, [refrence])
 
     return (
-    
-            <div className={`relative z-50 ${completed && 'hidden'}`} ref={refrence}>
-                <div id="intro-slider" className="w-full h-screen flex flex-col justify-center bg-gray-100 gap-4 tracking-tight z-20 p-16 absolute left-0 top-0">
-                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic font-Code " id="tx1"> Programmer </h1>
-                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-Code " id="tx2"> Web Developer </h1>
-                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-Code " id="tx3"> Coder </h1>
-                </div>
-                <div id="main-container" className="w-full flex relative items-center justify-center z-10 h-screen bg-black">
-                    <h1 id="welcome" className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw]  font-bold font-mono text-white">
-                        Welcome
-                    </h1>
-                </div>
+
+        <div className={`relative z-50 ${completed && 'hidden'}`} ref={refrence}>
+            <div id="main-container" className="w-full flex relative items-center justify-center z-10 h-screen bg-black">
+                <h1 id="welcome" className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw]  font-bold font-mono text-white">
+                    Welcome
+                </h1>
             </div>
-        
+            <div id="intro-slider" className="w-full h-screen flex flex-col justify-center bg-gray-100 gap-4 tracking-tight z-20 p-16 absolute left-0 top-0">
+                <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic font-Code " id="tx1"> Programmer </h1>
+                <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-Code " id="tx2"> Web Developer </h1>
+                <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-Code " id="tx3"> Coder </h1>
+            </div>
+        </div>
+
     )
 }
 
