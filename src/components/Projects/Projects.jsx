@@ -30,6 +30,8 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
+
+                <div className="absolute w-[50%] -z-10 h-[40%] top-10 blue__gradient -right-[500px]"></div>
             </div>
         </Section>
     );
