@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux'
 import { Section } from '../'
-import CV from '../../assests/CV/CV.pdf'
 import gsap from "gsap"
 import { useEffect, useRef } from "react";
 
