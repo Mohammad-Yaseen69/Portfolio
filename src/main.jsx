@@ -15,7 +15,8 @@ import {
   EditProject,
   AddSkills,
   AddSkillCategory,
-  ChangePassword
+  ChangePassword,
+  UpdateResume
 } from "./Admin"
 
 const router = createBrowserRouter(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         <Route path="skills/add/:categoryId" element={<AddSkills />} />
         <Route path="skills/category" element={<AddSkillCategory />} />
         <Route path="password" element={<ChangePassword />} />
+        <Route path="resume" element={<UpdateResume />} />
       </Route>
     </>
   )

@@ -15,7 +15,8 @@ const initialState = {
     info: null,
     projects: [],
     links: [],
-    skillCategories: []
+    skillCategories: [],
+    resume : ""
 }
 
 export const getInfo = createAsyncThunk("getInfo", async () => {
@@ -143,6 +144,18 @@ export const deleteSkillCategory = createAsyncThunk("deleteSkillCategory", async
     }
 })
 
+export const addResume = createAsyncThunk("updateResume", async (resume) => {
+    try {
+        const response = await Api.patch(`/info/updateResume`, resume);
+        toast.success("Resume uploaded successfully")
+        return response.data;
+    } catch (error) {
+        console.log(error)
+        toast.error(error.response?.data?.message || "Error Updating info")
+        throw new Error(error.response?.data?.message)
+    }
+})
+
 const infoSlice = createSlice({
     name: "info",
     initialState,
@@ -162,6 +175,7 @@ const infoSlice = createSlice({
                 id: data?._id
             };
 
+            state.resume = data?.resume?.publicUrl
             state.projects = data?.projects;
             state.links = data?.connect;
             state.skillCategories = data?.skillCategories;
@@ -248,6 +262,9 @@ const infoSlice = createSlice({
         })
         builder.addCase(deleteSkills.rejected, (state) => {
             state.loading = false;
+        })
+        builder.addCase(addResume.fulfilled, (state, action) => {
+            state.resume = action.payload.data?.resume?.publicUrl
         })
     }
 })

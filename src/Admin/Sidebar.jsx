@@ -68,6 +68,14 @@ const Sidebar = () => {
                                     </a>
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to="resume">
+                                    <a href="" className="flex items-center space-x-2 text-white hover:bg-gray-700 p-2 w-full text-left">
+                                        <FaTools />
+                                        <span>Update Resume</span>
+                                    </a>
+                                </NavLink>
+                            </li>
                         </ul>
                         <button onClick={handleLogout} className="flex items-center mt-5 space-x-2 text-white hover:bg-gray-700 p-2 w-full text-left">
                             <FaSignOutAlt />

@@ -6,30 +6,33 @@ import { useSelector } from 'react-redux';
 
 const About = () => {
     const info = useSelector(state => state.info.info)
+    const completed = useSelector(state => state.Animation.completed)
 
     const personalInfo = [
         { title: 'Name', value: "Mohammad Yaseen" },
         { title: 'Address', value: info?.address },
         { title: 'Age', value: info?.age },
         { title: 'Work Experience', value: info?.workExperience },
-        { title: "Language" , value : "Urdu, Hindhi, English" }
+        { title: "Language", value: "Urdu, Hindhi, English" }
     ];
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        if (completed) {
+            gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(['.info', '.about'], {
-            opacity: 1,
-            duration: 1,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top 70%', // Adjusted start position
-                end: 'bottom 20%', // Adjusted end position
-                toggleActions: 'play none none none',
-            }
-        });
-    }, []);
+            gsap.to(['.info', '.about'], {
+                opacity: 1,
+                duration: 1,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '#about',
+                    start: 'top 100%', // Adjusted start position
+                    end: 'bottom 20%', // Adjusted end position
+                    toggleActions: 'play none none none',
+                }
+            });
+        }
+    }, [completed]);
 
     return (
         <Section id="about">
@@ -49,7 +52,7 @@ const About = () => {
                     <div className='md:translate-y-20'>
                         <h1 className='font-bold font-Balsamiq uppercase text-start text-white text-4xl mb-8'>About me</h1>
                         <p className='text-gray-300  font-Code text-start  xs:text-xl'>
-                          {info?.about}
+                            {info?.about}
                         </p>
                     </div>
                 </div>
