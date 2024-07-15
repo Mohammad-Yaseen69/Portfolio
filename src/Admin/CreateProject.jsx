@@ -23,6 +23,9 @@ const CreateProject = () => {
     formData.append("techStack", JSON.stringify( data.techStack.replace(" ", "").split(",")))
     formData.append("img", data.img[0])
 
+    for(const pair of formData.entries()) {
+      console.log(pair[0], pair[1])
+    }
 
     dispatch(createProject(formData))
 
@@ -31,7 +34,6 @@ const CreateProject = () => {
     setValue("github", "")
     setValue("hostlink", "")
     setValue("techStack", "")
-    setValue("img", "")
   }
 
   return (

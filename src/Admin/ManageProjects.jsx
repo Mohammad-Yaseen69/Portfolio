@@ -21,10 +21,10 @@ const ManageProject = () => {
 
         <div className='grid grid-cols-1 sm:grid-cols-2  gap-8 mt-10'>
           {projects?.map((project, index) => (
-            <div key={index} className='bg-zinc-900 w-full xs:w-96 items-start h-full rounded-lg overflow-hidden shadow-lg flex flex-col'>
-              <img src={project.img.publicUrl} alt={project.name} className='w-full h-[15rem] object-cover object-center ' />
-              <div className=' p-4 flex w-full flex-1 items-center justify-between'>
-                <div className=''>
+            <div key={index} className='bg-zinc-900 w-full xs:w-96 items-start h-full rounded-lg break-words shadow-lg flex flex-col'>
+              <img src={project.img?.publicUrl} alt={project.name} className='w-full h-[15rem] object-cover object-center ' />
+              <div className=' p-4 flex w-full break-words flex-1 items-center justify-between'>
+                <div className='break-words'>
                   <h2 className='text-white text-xl font-semibold mb-2'>{project.name}</h2>
                   <p className='text-gray-300 mb-4'>{project.description}</p>
                 </div>

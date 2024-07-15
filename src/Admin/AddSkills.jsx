@@ -28,7 +28,6 @@ const AddSkills = () => {
 
 
         setValue("skill", "")
-        setValue("icon", "")
     }
 
     return (
