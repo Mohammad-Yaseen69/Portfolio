@@ -24,6 +24,5 @@ dist-ssr
 *.sw?
 .eslintrc.cjs
 package-lock.json
-postcss.config.js
 vite.config.js
 .env

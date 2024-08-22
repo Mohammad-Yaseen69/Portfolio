@@ -1,4 +1,5 @@
 import { BackgroundBeams } from "./components/ui/background-beams"
+import {ShootingStars} from "./components/ui/shooting-stars"
 import { CTA, Header, Hero, Skills, Projects, About, Contact, Footer, IntroAnimation } from "./components"
 import { useDispatch, useSelector } from "react-redux"
 import { getInfo } from "./store/infoSlice"
@@ -35,7 +36,7 @@ function App() {
         <Projects />
         <Contact />
         <Footer />
-        <BackgroundBeams />
+        <ShootingStars />
       </div>
     </>
   )
